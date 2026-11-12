@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO | WEB & GRAPHIC DESIGNER</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Noto+Sans+JP:wght@400;700&display=swap">
+    <!-- GSAP for Smooth Advanced Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- サイバー・クリエイティブ背景装飾 -->
+    <div class="cyber-bg" aria-hidden="true">
+        <div class="cyber-grid"></div>
+        <div class="cyber-glow"></div>
+        <div class="cyber-scan"></div>
+    </div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- ヘッダー・ナビゲーション -->
+    <header class="header">
+        <div class="logo">DESIGN PORTFOLIO</div>
+        <nav class="nav">
+            <a href="#hero">TOP</a>
+            <a href="#works">WORKS</a>
+            <a href="#about">ABOUT</a>
+        </nav>
+    </header>
+
+    <!-- 1. ヒーローセクション -->
+    <section class="hero" id="hero">
+        <div class="hero-inner">
+            <h1 class="hero-title">
+                <span class="hero-title-default">CREATIVE<br>WORKS</span>
+                <span class="hero-title-hover" aria-hidden="true">EXPLORE PORTFOLIO</span>
+            </h1>
+            <p class="hero-sub">WEB DESIGN / GRAPHIC / LOGO & BRANDING</p>
+            <div class="scroll-cue">
+                <p>SCROLL TO EXPLORE</p>
+                <div class="scroll-line" aria-hidden="true"><i></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. 作品フィルター ＆ ギャラリー -->
+    <section class="works-section" id="works">
+        <div class="section-title-wrap">
+            <h2 class="section-title">SELECTED WORKS</h2>
+            <!-- カテゴリフィルター -->
+            <div class="filter-group">
+                <button class="filter-btn active" data-filter="all">ALL</button>
+                <button class="filter-btn" data-filter="web">WEB DESIGN</button>
+                <button class="filter-btn" data-filter="graphic">SASSI / EDITORIAL</button>
+                <button class="filter-btn" data-filter="logo">LOGO & BRANDING</button>
+            </div>
+        </div>
+
+        <!-- 作品カードリスト -->
+        <div class="works-grid">
+
+            <!-- WORK ITEM 1 (WEB) -->
+            <article class="work-card" data-category="web" data-work-id="work-01">
+                <div class="image-mask">
+                    <button type="button" class="photo-trigger" aria-label="Webデザインカンプ詳細">
+                        <img src="images/photo01.jpg" alt="コーポレートサイトWEBカンプ">
+                        <div class="card-overlay">
+                            <span class="tag">WEB DESIGN</span>
+                            <span class="view-detail">VIEW CASE STUDY →</span>
+                        </div>
+                    </button>
+                </div>
+                <div class="work-meta">
+                    <span class="work-num">01</span>
+                    <h3 class="work-title">EC BRANDING SITE</h3>
+                </div>
+            </article>
+
+            <!-- WORK ITEM 2 (冊子・グラフィック) -->
+            <article class="work-card" data-category="graphic" data-work-id="work-02">
+                <div class="image-mask">
+                    <button type="button" class="photo-trigger" aria-label="冊子デザイン詳細">
+                        <img src="images/photo02.jpg" alt="ブランドルックブック冊子">
+                        <div class="card-overlay">
+                            <span class="tag">GRAPHIC / EDITORIAL</span>
+                            <span class="view-detail">VIEW CASE STUDY →</span>
+                        </div>
+                    </button>
+                </div>
+                <div class="work-meta">
+                    <span class="work-num">02</span>
+                    <h3 class="work-title">BRAND LOOKBOOK</h3>
+                </div>
+            </article>
+
+            <!-- WORK ITEM 3 (ロゴ) -->
+            <article class="work-card" data-category="logo" data-work-id="work-03">
+                <div class="image-mask">
+                    <button type="button" class="photo-trigger" aria-label="ロゴデザイン詳細">
+                        <img src="images/photo03.jpg" alt="コーポレートCI/VIロゴデザイン">
+                        <div class="card-overlay">
+                            <span class="tag">LOGO & BRANDING</span>
+                            <span class="view-detail">VIEW CASE STUDY →</span>
+                        </div>
+                    </button>
+                </div>
+                <div class="work-meta">
+                    <span class="work-num">03</span>
+                    <h3 class="work-title">TECH STARTUP LOGO</h3>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- 3. ABOUT セクション（ホバーアニメーション付き） -->
+    <section class="about-section" id="about">
+        <div class="section-title-wrap">
+            <h2 class="section-title">ABOUT ME</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-card hover-anim">
+                <h3 class="about-card-title">PROFILE</h3>
+                <p class="about-card-text">
+                    Webデザイン・コーディング・グラフィックデザインを中心に制作活動を行っています。UI/UXの思考に基づいた使いやすさと、印象に残るインタラクション・アニメーション構築を得意としています。
+                </p>
+            </div>
+            <div class="about-card hover-anim">
+                <h3 class="about-card-title">SKILLS & TOOLS</h3>
+                <ul class="skill-tags">
+                    <li class="skill-tag">HTML5 / CSS3</li>
+                    <li class="skill-tag">JavaScript / GSAP</li>
+                    <li class="skill-tag">Figma / XD</li>
+                    <li class="skill-tag">Photoshop / Illustrator</li>
+                    <li class="skill-tag">InDesign</li>
+                    <li class="skill-tag">Responsive Design</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. 全画面作品詳細ページ（全画面表示＆ホームに戻るボタン付き） -->
+    <div class="fullscreen-modal" id="work-modal" aria-hidden="true">
+        <div class="modal-header-bar">
+            <button type="button" class="home-btn" id="home-btn">← BACK TO HOME</button>
+            <button type="button" class="modal-close-icon" id="modal-close" aria-label="閉じる">×</button>
+        </div>
+        <div class="fullscreen-modal-content">
+            <div class="modal-body" id="modal-body">
+                <!-- JavaScriptで選択された作品の詳細情報を全画面動的挿入 -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 YOUR NAME. ALL RIGHTS RESERVED.</p>
+        <a href="#hero" class="back-to-top">BACK TO TOP</a>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
